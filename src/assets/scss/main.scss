@@ -1,0 +1,7 @@
+@forward './base/reset';
+@forward './base/typography';
+@forward './base/breakpoints.scss';
+
+body {
+	font-family: 'Grotesk-Light-Oblique';
+}
