@@ -1,0 +1,28 @@
+:root {
+	--fs-sm: clamp(0.75rem, 100vw, 1.2rem);
+	--fs-m: clamp(1rem, 100vw, 2em);
+	--fs-l: clamp(1.75rem, 100vw, 3rem);
+	--fs-xl: clamp(2.5rem, 5vw, 3.75rem);
+
+	--ff-regular: 'MonaSans', sans-serif;
+	--ff-bold: 'MonaSans-Bold', sans-serif;
+	--ff-light: 'MonaSans-Light', sans-serif;
+	--ff-medium: 'MonaSans-Medium', sans-serif;
+}
+
+.test-xl {
+	font-size: var(--fs-xl);
+}
+
+.test-l {
+	font-size: var(--fs-l);
+}
+
+.test-sm {
+	font-size: var(--fs-sm);
+}
+
+.test-m {
+	font-size: var(--fs-m);
+	font-family: var(--ff-light);
+}

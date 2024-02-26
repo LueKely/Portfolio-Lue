@@ -1,27 +1,19 @@
 @font-face {
-	font-family: 'Grotesk';
-	src: url('../typeface/AndersonGrotesk.otf') format('opentype');
+	font-family: 'MonaSans';
+	src: url('../typeface/MonaSans-Regular.otf') format('opentype');
 }
 
 @font-face {
-	font-family: 'Grotesk-Bold';
-	src: url('../typeface/AndersonGrotesk-Bold.otf') format('opentype');
+	font-family: 'MonaSans-Bold';
+	src: url('../typeface/MonaSans-Bold.otf') format('opentype');
 }
 
 @font-face {
-	font-family: 'Grotesk-Light';
-	src: url('../typeface/AndersonGrotesk-Light.otf') format('opentype');
+	font-family: 'MonaSans-Light';
+	src: url('../typeface/MonaSans-Light.otf') format('opentype');
 }
 
 @font-face {
-	font-family: 'Grotesk-Light-Oblique';
-	src: url('../typeface/AndersonGrotesk-LightOblique.otf') format('opentype');
-}
-@font-face {
-	font-family: 'Grotesk-Bold-Oblique';
-	src: url('../typeface/AndersonGrotesk-BoldOblique.otf') format('opentype');
-}
-@font-face {
-	font-family: 'Grotesk-Oblique';
-	src: url('../typeface/AndersonGrotesk-Oblique.otf') format('opentype');
+	font-family: 'MonaSans-Medium';
+	src: url('../typeface/MonaSans-Medium.otf') format('opentype');
 }
