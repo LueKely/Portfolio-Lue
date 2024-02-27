@@ -4,6 +4,8 @@
 @forward './globals/variables';
 
 body {
-	font-family: var(--ff-bold);
+	font-family: var(--ff-regular);
 	background-color: #f6edd7;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
