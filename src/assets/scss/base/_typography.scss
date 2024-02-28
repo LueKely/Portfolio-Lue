@@ -17,3 +17,13 @@
 	font-family: 'MonaSans-Medium';
 	src: url('../typeface/MonaSans-Medium.otf') format('opentype');
 }
+
+h1,
+h2 {
+	font-family: var(--ff-regular);
+}
+
+p,
+a {
+	font-family: var(--ff-light);
+}
