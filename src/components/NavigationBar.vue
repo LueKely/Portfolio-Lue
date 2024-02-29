@@ -7,9 +7,30 @@
 			</p>
 		</div>
 		<ul class="desktop">
-			<li><a href="#home">Home</a></li>
-			<li><a href="#projects">Projects</a></li>
-			<li><a href="#about">About</a></li>
+			<li>
+				<a
+					@click="setSection(1)"
+					:class="{ active: validateSection(currentSection, sectionList[0]) }"
+					href="#home"
+					>Home</a
+				>
+			</li>
+			<li>
+				<a
+					@click="setSection(2)"
+					:class="{ active: validateSection(currentSection, sectionList[1]) }"
+					href="#projects"
+					>Projects</a
+				>
+			</li>
+			<li>
+				<a
+					@click="setSection(3)"
+					:class="{ active: validateSection(currentSection, sectionList[2]) }"
+					href="#about"
+					>About</a
+				>
+			</li>
 		</ul>
 		<button class="desktop">Check My CV</button>
 		<button class="burger">Borgar</button>
@@ -17,14 +38,54 @@
 
 	<!-- mobile/table view -->
 	<aside class="burger">
-		<li><a href="#home">Home</a></li>
-		<li><a href="#projects">Projects</a></li>
-		<li><a href="#about">About</a></li>
-		<button>Check My CV</button>
+		<ul>
+			<li>
+				<a
+					@click="setSection(1)"
+					:class="{ active: validateSection(currentSection, sectionList[0]) }"
+					href="#home"
+					>Home</a
+				>
+			</li>
+			<li>
+				<a
+					@click="setSection(2)"
+					:class="{ active: validateSection(currentSection, sectionList[1]) }"
+					href="#projects"
+					>Projects</a
+				>
+			</li>
+			<li>
+				<a
+					@click="setSection(3)"
+					:class="{ active: validateSection(currentSection, sectionList[2]) }"
+					href="#about"
+					>About</a
+				>
+			</li>
+			<li><button>Check My CV</button></li>
+		</ul>
 	</aside>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+	import { ref } from 'vue';
+
+	type ValidatorFunction = (value: number, base: number) => boolean;
+
+	const currentSection = ref<number>(1);
+	const sectionList = ref<number[]>([1, 2, 3]);
+
+	const setSection = (sectionNo: number) => {
+		return (currentSection.value = sectionNo);
+	};
+
+	const validateSection = ref<ValidatorFunction>(
+		(value: number, base: number) => {
+			return value == base;
+		}
+	);
+</script>
 
 <style scoped lang="scss">
 	nav.desktop {
@@ -72,11 +133,25 @@
 	}
 
 	aside.burger {
+		width: 100dvw;
 		display: sticky;
 		top: 0;
 
 		@include break.desktop {
 			display: none;
 		}
+	}
+
+	a {
+		text-decoration: none;
+		color: var(--clr-brown-400);
+	}
+
+	a:hover {
+		text-decoration: underline;
+	}
+
+	a.active {
+		text-decoration: underline;
 	}
 </style>
