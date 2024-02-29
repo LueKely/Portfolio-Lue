@@ -2,17 +2,17 @@ $phone: 576px;
 $tablet: 768px;
 $desktop: 1200px;
 
-@mixin phone-width {
+@mixin phone {
 	@media screen and (min-width:#{$phone}) {
 		@content;
 	}
 }
-@mixin tablet-width {
+@mixin tablet_screen {
 	@media screen and (min-width:#{$tablet}) {
 		@content;
 	}
 }
-@mixin desktop-width {
+@mixin desktop_screen {
 	@media screen and (min-width: #{$desktop}) {
 		@content;
 	}

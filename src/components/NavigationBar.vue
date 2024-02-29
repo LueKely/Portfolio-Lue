@@ -7,9 +7,9 @@
 			</p>
 		</div>
 		<ul>
-			<li><a href="#home"></a>Home</li>
-			<li><a href="#projects"></a>Projects</li>
-			<li><a href="#about"></a>About</li>
+			<li><a href="#home">Home</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#about">About</a></li>
 		</ul>
 		<button>Check My CV</button>
 	</nav>
@@ -17,4 +17,19 @@
 
 <script setup lang="ts"></script>
 
-<style scoped></style>
+<style scoped lang="scss">
+	nav {
+		@include break.phone {
+			background-color: red;
+		}
+		position: sticky;
+		top: 0;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	ul {
+	}
+</style>
