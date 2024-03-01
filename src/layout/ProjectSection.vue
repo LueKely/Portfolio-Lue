@@ -1,5 +1,5 @@
 <template>
-	<div>This is the project Section</div>
+	<section>This is the project Section</section>
 </template>
 
 <script setup lang="ts"></script>
