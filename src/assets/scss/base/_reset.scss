@@ -54,3 +54,12 @@ button {
 	color: var(--clr-brown-300);
 	text-wrap: pretty;
 }
+
+button {
+	background-color: transparent;
+	border: none;
+}
+
+button:hover {
+	cursor: pointer;
+}

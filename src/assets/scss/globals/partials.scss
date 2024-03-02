@@ -1,0 +1,10 @@
+section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 90dvh;
+}
+
+main {
+	padding: clamp(0.5rem, 2vw, 1.5rem);
+}

@@ -1,37 +1,69 @@
 <template>
-	<section>
+	<section id="home">
 		<!-- text -->
-		<div>
-			<div>
+		<div class="text-container">
+			<div class="intro">
 				<h1>
-					Hi, My Name is <br />
-					Lue Anunciacion
+					Hi, I'm <br />
+					Lue Anunciacion.
 				</h1>
 				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas
-					quidem ab eaque quod maiores minima dolores sapiente ex, nisi
-					perspiciatis qui eius! Id, provident? Excepturi odit et non nulla
-					nemo!
+					A Web Developer Based <br />
+					on the Philippines. <br />
+					Always looking for new <br />inspirations.
 				</p>
 			</div>
 
-			<div>
+			<div class="ending">
 				<p>
-					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas
-					quidem ab eaque quod maiores minima dolores sapiente ex, nisi
-					perspiciatis qui eius! Id, provident? Excepturi odit et non nulla
-					nemo!
+					Creating Projects ,<br />
+					Learning Trends,<br />
+					Collaborating with Colleagues.
 				</p>
-				<div>
+				<div class="button-wrapper">
 					<button>Check My Cv</button>
 				</div>
 			</div>
 		</div>
 		<!-- canvas -->
-		<div></div>
+		<div class="canvas-container">canvas</div>
 	</section>
 </template>
+<style scoped lang="scss">
+	.text-container {
+		height: 100%;
+		flex: 1;
 
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: space-between;
+	}
+
+	.intro > p {
+		margin-top: 2vw;
+	}
+
+	.ending {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		justify-content: center;
+
+		text-align: end;
+		padding-block: 2rem;
+	}
+
+	.button-wrapper {
+		margin-top: 10px;
+		padding-top: 10px;
+		width: 100%;
+		border-top: 1px #c5bdac solid;
+	}
+	.canvas-container {
+		height: 100%;
+		flex: 1.4;
+	}
+</style>
 <script setup lang="ts"></script>
-
-<style scoped></style>

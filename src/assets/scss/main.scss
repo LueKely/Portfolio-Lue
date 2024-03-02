@@ -2,7 +2,7 @@
 @forward './base/typography';
 @forward './base/breakpoints';
 @forward './globals/variables';
-
+@forward './globals/partials.scss';
 body {
 	font-family: var(--ff-regular);
 	background-color: #f6edd7;
@@ -10,6 +10,10 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
+html {
+	scroll-behavior: smooth;
+	scroll-padding: 100px;
+}
 #app {
 	position: relative;
 }

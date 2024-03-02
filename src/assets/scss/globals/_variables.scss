@@ -1,8 +1,8 @@
 :root {
-	--fs-sm: clamp(0.75rem, 100vw, 1.2rem);
-	--fs-m: clamp(1rem, 100vw, 2em);
-	--fs-l: clamp(1.75rem, 100vw, 3rem);
-	--fs-xl: clamp(2.5rem, 5vw, 3.75rem);
+	--fs-sm: clamp(0.75rem, 1vw, 1.2rem);
+	--fs-m: clamp(1rem, 2vw, 2rem);
+	--fs-l: clamp(1.75rem, 3vw, 3rem);
+	--fs-xl: clamp(2rem, 5vw, 6rem);
 
 	--ff-regular: 'MonaSans', sans-serif;
 	--ff-bold: 'MonaSans-Bold', sans-serif;
@@ -12,4 +12,21 @@
 	--clr-brown-100: #f6edd7;
 	--clr-brown-200: #d0c4a5;
 	--clr-brown-300: #372d12;
+}
+
+p,
+a {
+	font-size: var(--fs-m);
+}
+
+button {
+	font-size: var(--fs-m);
+}
+
+h1 {
+	font-size: var(--fs-xl);
+}
+
+h2 {
+	font-size: var(--fs-l);
 }

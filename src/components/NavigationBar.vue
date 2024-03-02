@@ -1,9 +1,10 @@
 <template>
 	<nav class="desktop">
-		<div>
+		<div class="logo-wrapper">
+			<img width="40" height="40" src="../assets/logo.svg" alt="logo" />
 			<p>
 				Lue <br />
-				Anunciacion
+				Anunciacion.
 			</p>
 		</div>
 		<ul class="desktop">
@@ -99,6 +100,12 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+
+		padding: 10px;
+
+		* {
+			font-size: var(--fs-sm);
+		}
 	}
 
 	ul.desktop {
@@ -153,5 +160,15 @@
 
 	a.active {
 		text-decoration: underline;
+	}
+
+	.logo-wrapper {
+		display: flex;
+		gap: 10px;
+		justify-items: center;
+		align-items: center;
+	}
+	.logo-wrapper > p {
+		font-family: var(--ff-bold);
 	}
 </style>
