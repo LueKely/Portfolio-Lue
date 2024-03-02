@@ -93,7 +93,7 @@
 		@include break.tablet {
 			// display: none;
 		}
-
+		background-color: var(--clr-brown-100);
 		position: sticky;
 		top: 0;
 
