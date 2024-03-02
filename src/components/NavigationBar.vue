@@ -1,7 +1,7 @@
 <template>
 	<nav class="desktop">
 		<div class="logo-wrapper">
-			<img width="40" height="40" src="../assets/logo.svg" alt="logo" />
+			<img src="../assets/logo.svg" alt="logo" />
 			<p>
 				Lue <br />
 				Anunciacion.
@@ -167,6 +167,11 @@
 		gap: 10px;
 		justify-items: center;
 		align-items: center;
+	}
+
+	.logo-wrapper > img {
+		aspect-ratio: 1/1;
+		width: clamp(1.5rem, 3vw, 3rem);
 	}
 	.logo-wrapper > p {
 		font-family: var(--ff-bold);
