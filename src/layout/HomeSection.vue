@@ -58,7 +58,7 @@
 	}
 
 	.intro > p {
-		margin-top: 2vw;
+		margin-top: 1vw;
 	}
 
 	.ending {
