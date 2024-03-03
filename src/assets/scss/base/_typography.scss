@@ -1,26 +1,26 @@
 @font-face {
-	font-family: 'MonaSans';
-	src: url('../typeface/MonaSans-Regular.otf') format('opentype');
+	font-family: 'Satoshi';
+	src: url('../typeface/Satoshi-Regular.otf') format('opentype');
 }
 
 @font-face {
-	font-family: 'MonaSans-Bold';
-	src: url('../typeface/MonaSans-Bold.otf') format('opentype');
+	font-family: 'Satoshi-Bold';
+	src: url('../typeface/Satoshi-Bold.otf') format('opentype');
 }
 
 @font-face {
-	font-family: 'MonaSans-Light';
-	src: url('../typeface/MonaSans-Light.otf') format('opentype');
+	font-family: 'Satoshi-Light';
+	src: url('../typeface/Satoshi-Light.otf') format('opentype');
 }
 
 @font-face {
-	font-family: 'MonaSans-Medium';
-	src: url('../typeface/MonaSans-Medium.otf') format('opentype');
+	font-family: 'Satoshi-Medium';
+	src: url('../typeface/Satoshi-Medium.otf') format('opentype');
 }
 
 h1,
 h2 {
-	font-family: var(--ff-regular);
+	font-family: var(--ff-medium);
 }
 
 p,

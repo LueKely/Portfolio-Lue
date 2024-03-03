@@ -101,7 +101,7 @@
 		justify-content: space-between;
 		align-items: center;
 
-		padding: 10px;
+		padding: 10px clamp(0.5rem, 2vw, 1.5rem);
 
 		* {
 			font-size: var(--fs-sm);
@@ -171,7 +171,7 @@
 
 	.logo-wrapper > img {
 		aspect-ratio: 1/1;
-		width: clamp(1.5rem, 3vw, 3rem);
+		width: clamp(1.2rem, 5vw, 2.5rem);
 	}
 	.logo-wrapper > p {
 		font-family: var(--ff-bold);
