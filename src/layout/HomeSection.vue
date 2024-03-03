@@ -30,26 +30,9 @@
 	</section>
 </template>
 <style scoped lang="scss">
-	p,
-	h1,
-	button {
-		animation-name: fadeToColor;
-		animation-duration: 250ms;
-		animation-timing-function: ease-in-out;
-		animation-fill-mode: forwards;
-	}
-
-	@keyframes fadeToColor {
-		from {
-			color: transparent;
-		}
-		to {
-			color: var(--clr-brown-300);
-		}
-	}
-
 	.text-container {
 		height: 100%;
+		flex: 1;
 
 		display: flex;
 		flex-direction: column;
@@ -58,7 +41,7 @@
 	}
 
 	.intro > p {
-		margin-top: 2vh;
+		margin-top: 2vw;
 	}
 
 	.ending {
@@ -80,7 +63,7 @@
 	}
 	.canvas-container {
 		height: 100%;
-		flex: 1;
+		flex: 1.4;
 	}
 </style>
 <script setup lang="ts"></script>
