@@ -101,8 +101,7 @@
 		justify-content: space-between;
 		align-items: center;
 
-		padding: 10px;
-
+		padding: 10px clamp(0.5rem, 2vw, 1.5rem);
 		* {
 			font-size: var(--fs-sm);
 		}
