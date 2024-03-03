@@ -170,7 +170,7 @@
 
 	.logo-wrapper > img {
 		aspect-ratio: 1/1;
-		width: clamp(1.5rem, 3vw, 3rem);
+		width: clamp(1.2rem, 5vw, 2.5rem);
 	}
 	.logo-wrapper > p {
 		font-family: var(--ff-bold);
