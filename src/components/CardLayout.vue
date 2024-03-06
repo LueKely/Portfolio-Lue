@@ -30,4 +30,26 @@
 	const props = defineProps<FinalProject>();
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+	p,
+	a {
+		font-size: var(--fs-sm);
+	}
+
+	article {
+		border-block: 1px solid var(--clr-brown-200);
+	}
+
+	h1 {
+		border-bottom: 1px solid var(--clr-brown-200);
+	}
+
+	.tag-wrapper {
+		border-bottom: 1px solid var(--clr-brown-200);
+	}
+	h1 + p {
+		border-bottom: 1px solid var(--clr-brown-200);
+		font-family: var(--ff-regular);
+		margin-bottom: 1vh;
+	}
+</style>

@@ -1,10 +1,13 @@
 <template>
 	<section id="projects">
 		<h1>Projects</h1>
-		<div class="cardWrapper">
-			<div v-for="(project, index) in projectList" :key="index">
-				<CardLayout v-bind="project" :item-no="index"></CardLayout>
-			</div>
+		<div class="card-wrapper">
+			<CardLayout
+				v-for="(project, index) in projectList"
+				:key="index"
+				v-bind="project"
+				:item-no="index"
+			></CardLayout>
 		</div>
 	</section>
 </template>
@@ -23,5 +26,15 @@
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: flex-start;
+	}
+
+	.card-wrapper {
+		width: 100%;
+		// background-color: red;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		gap: 2vw;
+		flex-wrap: wrap;
 	}
 </style>
