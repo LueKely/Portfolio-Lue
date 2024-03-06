@@ -18,4 +18,10 @@
 	const projectList = ref<Project[]>(projects);
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+	#projects {
+		flex-direction: column;
+		align-items: flex-start;
+		justify-content: flex-start;
+	}
+</style>
