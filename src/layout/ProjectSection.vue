@@ -34,7 +34,7 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		gap: 2vw;
+		gap: 50px;
 		flex-wrap: wrap;
 	}
 </style>

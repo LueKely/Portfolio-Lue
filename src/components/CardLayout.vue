@@ -1,14 +1,21 @@
 <template>
 	<article>
 		<h1>{{ stringfyNumber }}</h1>
-		<p>{{ props.title }}</p>
+		<div class="text-wrapper">
+			<p>{{ props.title }}</p>
+		</div>
 		<div class="tag-wrapper">
 			<p v-for="(tag, index) in props.tags" :key="index">
 				{{ tag }}
 			</p>
 		</div>
-		<p>{{ props.description }}</p>
-		<p>{{ props.link }}</p>
+		<div class="text-wrapper">
+			<p>{{ props.description }}</p>
+		</div>
+		<div class="text-wrapper">
+			<span>Link: &nbsp;</span>
+			<a :href="props.link" target="_blank">{{ props.link }}</a>
+		</div>
 	</article>
 </template>
 
@@ -31,25 +38,44 @@
 </script>
 
 <style lang="scss" scoped>
+	// todo:
+	//add clamp width and clamp height
+	// add bg on button cv
+	// if it is has height then must use flex
+	article {
+		min-width: 200px;
+		width: 20rem;
+		max-width: 300px;
+		display: flex;
+		flex-direction: column;
+	}
+
 	p,
 	a {
 		font-size: var(--fs-sm);
 	}
 
-	article {
-		border-block: 1px solid var(--clr-brown-200);
-	}
-
 	h1 {
-		border-bottom: 1px solid var(--clr-brown-200);
+		border-block: 1px solid var(--clr-brown-200);
 	}
 
 	.tag-wrapper {
 		border-bottom: 1px solid var(--clr-brown-200);
 	}
-	h1 + p {
+	.text-wrapper,
+	.tag-wrapper {
 		border-bottom: 1px solid var(--clr-brown-200);
 		font-family: var(--ff-regular);
-		margin-bottom: 1vh;
+		padding: 5px;
+	}
+	article > .text-wrapper:nth-child(2) > p {
+		font-family: var(--ff-bold);
+	}
+	.text-wrapper:last-child {
+		padding-top: 20px;
+	}
+
+	a > span {
+		font-family: var(--ff-bold);
 	}
 </style>
