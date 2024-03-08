@@ -46,6 +46,11 @@
 		min-width: 200px;
 		width: 20rem;
 		max-width: 300px;
+
+		min-height: 300px;
+		height: 40vh;
+		max-height: 350px;
+
 		display: flex;
 		flex-direction: column;
 	}
@@ -71,11 +76,20 @@
 	article > .text-wrapper:nth-child(2) > p {
 		font-family: var(--ff-bold);
 	}
+
+	article > .text-wrapper:nth-child(4) {
+		flex: 1;
+	}
 	.text-wrapper:last-child {
-		padding-top: 20px;
+		// padding-top: 20px;
+		flex: 0.5;
+		display: flex;
+		align-items: flex-end;
+		justify-content: flex-start;
 	}
 
-	a > span {
+	span {
 		font-family: var(--ff-bold);
+		font-size: var(--fs-sm);
 	}
 </style>

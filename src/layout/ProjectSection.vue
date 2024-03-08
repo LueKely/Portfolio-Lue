@@ -29,6 +29,7 @@
 	}
 
 	.card-wrapper {
+		padding-top: 20px;
 		width: 100%;
 		// background-color: red;
 		display: flex;
