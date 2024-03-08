@@ -21,7 +21,7 @@
 					Collaborating with Colleagues.
 				</p>
 				<div class="button-wrapper">
-					<button>Check My Cv</button>
+					<button>Check My CV</button>
 				</div>
 			</div>
 		</div>
@@ -75,8 +75,15 @@
 	.button-wrapper {
 		margin-top: 10px;
 		padding-top: 10px;
+
 		width: 100%;
 		border-top: 1px #c5bdac solid;
+		button {
+			border-radius: 100px;
+			padding: 5px 10px;
+			background-color: var(--clr-brown-300);
+			color: var(--clr-brown-100) !important;
+		}
 	}
 	.canvas-container {
 		height: 100%;

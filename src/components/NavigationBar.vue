@@ -136,6 +136,10 @@
 		@include break.phone {
 			display: none;
 		}
+		border-radius: 100px;
+		padding: 5px 10px;
+		background-color: var(--clr-brown-300);
+		color: var(--clr-brown-100) !important;
 	}
 
 	aside.burger {
