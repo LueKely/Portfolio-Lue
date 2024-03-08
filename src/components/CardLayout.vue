@@ -5,9 +5,15 @@
 			<p>{{ props.title }}</p>
 		</div>
 		<div class="tag-wrapper">
-			<p v-for="(tag, index) in props.tags" :key="index">
-				{{ tag }}
-			</p>
+			<div
+				v-for="(tag, index) in props.tags"
+				:style="{ background: tag.color }"
+				:key="index"
+			>
+				<p>
+					{{ tag.name }}
+				</p>
+			</div>
 		</div>
 		<div class="text-wrapper">
 			<p>{{ props.description }}</p>
@@ -66,6 +72,18 @@
 
 	.tag-wrapper {
 		border-bottom: 1px solid var(--clr-brown-200);
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+
+		div {
+			padding: 2px 8px;
+			border-radius: 100px;
+			p {
+				font-size: clamp(0.9rem, 2.5vh, 1rem);
+				color: white;
+			}
+		}
 	}
 	.text-wrapper,
 	.tag-wrapper {

@@ -1,32 +1,32 @@
 [
 	{
-		"tags": [{ "name": "test", "color": "#12313" }],
+		"tags": [{ "name": "test", "color": "#edaef5" }],
 		"title": "Echoes Tracker",
-		"description": "testing the json",
+		"description": "Echoes Tracker is a real time web-based location tracker for students and teachers a-like. ",
 		"link": "test.testing.org"
 	},
 	{
-		"tags": [{ "name": "test", "color": "#12313" }],
+		"tags": [{ "name": "UX Lead", "color": "#edaef5" }],
 		"title": "What's Your Ulam",
-		"description": "testing the json",
+		"description": "What's Your Ulam a web-based recipe sharing platform.",
 		"link": "test.testing.org"
 	},
 	{
-		"tags": [{ "name": "test", "color": "#12313" }],
+		"tags": [{ "name": "test", "color": "#edaef5" }],
 		"title": "Gym Circle",
-		"description": "Gym Circle is a Web base gym subscription service",
+		"description": "Gym Circle is a Web base gym subscription service.",
 		"link": "test.testing.org"
 	},
 	{
-		"tags": [{ "name": "test", "color": "#12313" }],
+		"tags": [{ "name": "test", "color": "#edaef5" }],
 		"title": "Project Kaptan",
-		"description": "testing the json",
+		"description": "Project Kaptan is a weather app for metro manila that is heavily inspired by Persona 5",
 		"link": "test.testing.org"
 	},
 	{
-		"tags": [{ "name": "test", "color": "#12313" }],
-		"title": "test",
-		"description": "testing the json",
+		"tags": [{ "name": "test", "color": "#edaef5" }],
+		"title": "Pixel Art Gallery",
+		"description": "Pixel Art Gallery is a gallery for the pixel art I make. ",
 		"link": "test.testing.org"
 	}
 ]

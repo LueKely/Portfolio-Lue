@@ -35,7 +35,8 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		gap: 50px;
+		column-gap: 15px;
+		row-gap: 70px;
 		flex-wrap: wrap;
 	}
 </style>
