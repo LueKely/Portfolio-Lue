@@ -1,5 +1,6 @@
 <template>
 	<main>
+		<NavigationBar></NavigationBar>
 		<HomeSection></HomeSection>
 		<ProjectSection></ProjectSection>
 		<AboutSection></AboutSection>
@@ -7,6 +8,7 @@
 </template>
 
 <script setup lang="ts">
+	import NavigationBar from '@/components/NavigationBar.vue';
 	import AboutSection from '@/layout/AboutSection.vue';
 	import HomeSection from '@/layout/HomeSection.vue';
 	import ProjectSection from '@/layout/ProjectSection.vue';

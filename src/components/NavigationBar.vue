@@ -5,6 +5,7 @@
 			<p>
 				Lue <br />
 				Anunciacion.
+				{{ currentSectionName }}
 			</p>
 		</div>
 		<ul class="desktop">
@@ -70,7 +71,7 @@
 </template>
 
 <script setup lang="ts">
-	import { ref } from 'vue';
+	import { ref, onMounted } from 'vue';
 
 	type ValidatorFunction = (value: number, base: number) => boolean;
 
@@ -86,6 +87,25 @@
 			return value == base;
 		}
 	);
+
+	const currentSectionName = ref<string | null>('');
+	onMounted(() => {
+		const oberserver: IntersectionObserver = new IntersectionObserver(
+			(entries: IntersectionObserverEntry[]) => {
+				entries.forEach((entry) => {
+					if (entry.intersectionRatio > 0) {
+						currentSectionName.value = entry.target.getAttribute('id');
+					}
+				});
+			}
+		);
+
+		document.querySelectorAll('section').forEach((section) => {
+			// console.log(section);
+
+			oberserver.observe(section);
+		});
+	});
 </script>
 
 <style scoped lang="scss">
