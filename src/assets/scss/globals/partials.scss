@@ -2,7 +2,12 @@ section {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 90dvh;
+	height: 90vh;
+}
+
+section#projects {
+	height: auto;
+	min-height: 90vh;
 }
 
 main {

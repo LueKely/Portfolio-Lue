@@ -49,12 +49,12 @@
 	// add bg on button cv
 	// if it is has height then must use flex
 	article {
-		min-width: 200px;
-		width: 20rem;
+		min-width: 280px;
+		width: 20vh;
 		max-width: 300px;
 
 		min-height: 300px;
-		height: 40vh;
+		height: 30vh;
 		max-height: 350px;
 
 		display: flex;
