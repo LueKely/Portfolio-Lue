@@ -4,8 +4,8 @@
 		<div class="text-wrapper">
 			<p>{{ props.title }}</p>
 		</div>
-		<div class="tag-wrapper">
-			<div
+		<ul class="tag-wrapper">
+			<li
 				v-for="(tag, index) in props.tags"
 				:style="{ background: tag.color }"
 				:key="index"
@@ -13,12 +13,12 @@
 				<p>
 					{{ tag.name }}
 				</p>
-			</div>
-		</div>
+			</li>
+		</ul>
 		<div class="text-wrapper">
 			<p>{{ props.description }}</p>
 		</div>
-		<div class="text-wrapper">
+		<div class="text-wrapper link">
 			<span>Link: &nbsp;</span>
 			<a :href="props.link" target="_blank">{{ props.link }}</a>
 		</div>
@@ -75,8 +75,9 @@
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-
-		div {
+		list-style: none;
+		column-gap: 5px;
+		li {
 			padding: 2px 8px;
 			border-radius: 100px;
 			p {
@@ -109,5 +110,17 @@
 	span {
 		font-family: var(--ff-bold);
 		font-size: var(--fs-sm);
+	}
+
+	.link {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		padding-inline: 10px;
+		a {
+			width: 100%;
+			overflow: hidden;
+			text-overflow: ellipsis;
+		}
 	}
 </style>

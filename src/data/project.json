@@ -1,32 +1,50 @@
 [
 	{
-		"tags": [{ "name": "test", "color": "#edaef5" }],
+		"tags": [
+			{ "name": "UX Lead", "color": "#e17aef" },
+			{ "name": "Team Project", "color": "#d83674" }
+		],
 		"title": "Echoes Tracker",
 		"description": "Echoes Tracker is a real time web-based location tracker for students and teachers a-like. ",
 		"link": "test.testing.org"
 	},
 	{
-		"tags": [{ "name": "UX Lead", "color": "#edaef5" }],
+		"tags": [
+			{ "name": "Team Project", "color": "#d83674" },
+			{ "name": "UX Lead", "color": "#e17aef" }
+		],
 		"title": "What's Your Ulam",
 		"description": "What's Your Ulam a web-based recipe sharing platform.",
 		"link": "test.testing.org"
 	},
 	{
-		"tags": [{ "name": "test", "color": "#edaef5" }],
+		"tags": [
+			{ "name": "Project Manager", "color": "#3d45ce" },
+			{ "name": "Team Project", "color": "#d83674" }
+		],
 		"title": "Gym Circle",
 		"description": "Gym Circle is a Web base gym subscription service.",
 		"link": "test.testing.org"
 	},
 	{
-		"tags": [{ "name": "test", "color": "#edaef5" }],
+		"tags": [
+			{ "name": "Solo Project", "color": "#41c68a" },
+			{ "name": "Case Study", "color": "#e8b614" }
+		],
 		"title": "Project Kaptan",
 		"description": "Project Kaptan is a weather app for metro manila that is heavily inspired by Persona 5",
-		"link": "test.testing.org"
+		"link": "https://luekely.github.io/Project-Kaptan/index.html"
 	},
 	{
-		"tags": [{ "name": "test", "color": "#edaef5" }],
+		"tags": [{ "name": "Solo Project", "color": "#41c68a" }],
 		"title": "Pixel Art Gallery",
 		"description": "Pixel Art Gallery is a gallery for the pixel art I make. ",
+		"link": "pixel-art-gallery.vercel.app"
+	},
+	{
+		"tags": [{ "name": "Solo Project", "color": "#41c68a" }],
+		"title": "Vanity Way",
+		"description": "A simple frontend page for a none existing store. ",
 		"link": "test.testing.org"
 	}
 ]
