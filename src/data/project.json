@@ -6,7 +6,7 @@
 		],
 		"title": "Echoes Tracker",
 		"description": "Echoes Tracker is a real time web-based location tracker for students and teachers a-like. ",
-		"link": "test.testing.org"
+		"link": "https://github.com/pangilinanervin22/echoes-track-frontend"
 	},
 	{
 		"tags": [
@@ -15,7 +15,7 @@
 		],
 		"title": "What's Your Ulam",
 		"description": "What's Your Ulam a web-based recipe sharing platform.",
-		"link": "test.testing.org"
+		"link": "https://github.com/LueKely/WYU-Frontend"
 	},
 	{
 		"tags": [
@@ -24,7 +24,7 @@
 		],
 		"title": "Gym Circle",
 		"description": "Gym Circle is a Web base gym subscription service.",
-		"link": "test.testing.org"
+		"link": "https://github.com/LueKely/GymCircle"
 	},
 	{
 		"tags": [
@@ -45,6 +45,12 @@
 		"tags": [{ "name": "Solo Project", "color": "#41c68a" }],
 		"title": "Vanity Way",
 		"description": "A simple frontend page for a none existing store. ",
-		"link": "test.testing.org"
+		"link": "https://luekely.github.io/Vanity-Way/"
+	},
+	{
+		"tags": [{ "name": "Solo Project", "color": "#41c68a" }],
+		"title": "Magic Potion Shop",
+		"description": "Buy my potions!",
+		"link": "https://luekely.github.io/Magic-Potion-Shop/"
 	}
 ]

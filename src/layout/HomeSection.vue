@@ -83,6 +83,7 @@
 			padding: 5px 10px;
 			background-color: var(--clr-brown-300);
 			color: var(--clr-brown-100) !important;
+			font-size: var(--fs-sm);
 		}
 	}
 	.canvas-container {
