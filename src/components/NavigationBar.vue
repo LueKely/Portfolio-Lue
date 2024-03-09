@@ -5,14 +5,15 @@
 			<p>
 				Lue <br />
 				Anunciacion.
-				{{ currentSectionName }}
 			</p>
 		</div>
 		<ul class="desktop">
 			<li>
 				<a
 					@click="setSection(1)"
-					:class="{ active: validateSection(currentSection, sectionList[0]) }"
+					:class="{
+						active: currentSectionName == 'home',
+					}"
 					href="#home"
 					>Home</a
 				>
@@ -20,7 +21,9 @@
 			<li>
 				<a
 					@click="setSection(2)"
-					:class="{ active: validateSection(currentSection, sectionList[1]) }"
+					:class="{
+						active: currentSectionName == 'projects',
+					}"
 					href="#projects"
 					>Projects</a
 				>
@@ -28,7 +31,9 @@
 			<li>
 				<a
 					@click="setSection(3)"
-					:class="{ active: validateSection(currentSection, sectionList[2]) }"
+					:class="{
+						active: currentSectionName == 'about',
+					}"
 					href="#about"
 					>About</a
 				>
@@ -90,19 +95,23 @@
 
 	const currentSectionName = ref<string | null>('');
 	onMounted(() => {
+		const options = {
+			root: null, // Use the viewport as the root
+			rootMargin: '0px',
+			threshold: 0.5, // Adjust the threshold value here (50% of the target element is visible)
+		};
 		const oberserver: IntersectionObserver = new IntersectionObserver(
 			(entries: IntersectionObserverEntry[]) => {
 				entries.forEach((entry) => {
-					if (entry.intersectionRatio > 0) {
+					if (entry.isIntersecting) {
 						currentSectionName.value = entry.target.getAttribute('id');
 					}
 				});
-			}
+			},
+			options
 		);
 
 		document.querySelectorAll('section').forEach((section) => {
-			// console.log(section);
-
 			oberserver.observe(section);
 		});
 	});
