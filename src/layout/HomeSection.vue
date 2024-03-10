@@ -26,7 +26,9 @@
 			</div>
 		</div>
 		<!-- canvas -->
-		<div class="canvas-container">canvas</div>
+		<div class="canvas-container">
+			<CanvasPlayground></CanvasPlayground>
+		</div>
 	</section>
 </template>
 <style scoped lang="scss">
@@ -89,6 +91,9 @@
 	.canvas-container {
 		height: 100%;
 		flex: 1.4;
+		padding: 10px;
 	}
 </style>
-<script setup lang="ts"></script>
+<script setup lang="ts">
+	import CanvasPlayground from '@/components/CanvasPlayground.vue';
+</script>
