@@ -3,21 +3,31 @@
 </template>
 
 <script setup lang="ts">
-	import { ref, onMounted, watch } from 'vue';
+	import { ref, onMounted } from 'vue';
 	import p5 from 'p5';
-	import type { Graphics } from 'p5';
+
 	const homeCanvas = ref<HTMLDivElement | null>(null);
 	// Define the p5 sketch
-
-	const canvasWidth = ref<number>(homeCanvas.value?.clientWidth || 400);
-	const canvasHeight = ref<number>(homeCanvas.value?.clientHeight || 400);
 
 	const sketch = (p: p5) => {
 		p.setup = () => {
 			if (homeCanvas.value == null) throw new Error('pee pee poo poo');
 
-			const canvas = p.createCanvas(canvasWidth.value, canvasHeight.value);
+			const canvas = p.createCanvas(
+				homeCanvas.value?.clientWidth,
+				homeCanvas.value?.clientHeight
+			);
 			canvas.parent(homeCanvas.value);
+		};
+
+		p.windowResized = () => {
+			if (homeCanvas.value == null) throw new Error('pee pee poo poo');
+			console.log('i have resized');
+
+			const width = homeCanvas.value.clientWidth;
+			const height = homeCanvas.value.clientHeight;
+			console.log(width, height);
+			p.resizeCanvas(width, height);
 		};
 
 		p.draw = () => {
@@ -34,7 +44,6 @@
 
 <style scoped>
 	#canvas-home {
-		width: 100%;
-		height: 100%;
+		flex: 1;
 	}
 </style>
