@@ -1,18 +1,20 @@
 <template>
 	<section id="about">
 		<div class="text-wrapper">
-			<div>
-				<h1>About Me</h1>
+			<div class="wrapper">
+				<div>
+					<h1>About Me</h1>
+				</div>
+				<div class="underline-wrapper">
+					<h2>Skills</h2>
+				</div>
+				<ul>
+					<li>HTML, CSS and Javascript</li>
+					<li>JS Front & Backend Frameworks</li>
+					<li>JS libraries like Typescript</li>
+					<li>Databases such as Mongo</li>
+				</ul>
 			</div>
-			<div class="underline-wrapper">
-				<h2>Skills</h2>
-			</div>
-			<ul>
-				<li>HTML, CSS and Javascript</li>
-				<li>JS Front & Backend Frameworks</li>
-				<li>JS libraries like Typescript</li>
-				<li>Databases such as Mongo</li>
-			</ul>
 
 			<div class="link-wrapper">
 				<div>
@@ -35,7 +37,12 @@
 
 <style scoped lang="scss">
 	.text-wrapper {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		flex-direction: column;
 		flex: 1;
+		height: 100%;
 	}
 	.canvas-wrapper {
 		flex: 1.4;
@@ -59,6 +66,7 @@
 	}
 
 	.link-wrapper {
+		width: 100%;
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
