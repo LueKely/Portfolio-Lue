@@ -27,7 +27,7 @@
 		</div>
 		<!-- canvas -->
 		<div class="canvas-container">
-			<CanvasPlayground></CanvasPlayground>
+			<CanvasHome></CanvasHome>
 		</div>
 	</section>
 </template>
@@ -96,5 +96,5 @@
 	}
 </style>
 <script setup lang="ts">
-	import CanvasPlayground from '@/components/CanvasPlayground.vue';
+	import CanvasHome from '@/components/CanvasHome.vue';
 </script>
