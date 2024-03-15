@@ -6,7 +6,7 @@
 					<h1>About Me</h1>
 				</div>
 				<div class="underline-wrapper">
-					<h2>Skills</h2>
+					<h2 class="skill">Skills</h2>
 				</div>
 				<ul>
 					<li>HTML, CSS and Javascript</li>
@@ -21,7 +21,7 @@
 					<div class="underline-wrapper">
 						<h2>Github</h2>
 					</div>
-					<a target="_blank" href="https://github.com/LueKely">Lue Kely</a>
+					<a target="_blank" href="https://github.com/LueKely">@Lue Kely</a>
 				</div>
 				<div>
 					<div class="underline-wrapper"><h2>Email</h2></div>
@@ -49,8 +49,8 @@
 	}
 
 	.underline-wrapper {
-		border-bottom: 1px solid var(--clr-brown-200);
-		margin-block: 20px;
+		border-top: 1px solid var(--clr-brown-200);
+		// margin-top: 20px;
 	}
 
 	.email {
@@ -70,5 +70,8 @@
 		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
+	}
+	.skill {
+		margin-bottom: 1rem;
 	}
 </style>
