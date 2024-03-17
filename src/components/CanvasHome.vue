@@ -5,6 +5,7 @@
 <script setup lang="ts">
 	import { ref, onMounted } from 'vue';
 	import * as THREE from 'three';
+	import * as TWEEN from '@tweenjs/tween.js';
 	import canvasUtils from '@/utils/canvasUtils';
 
 	const homeCanvas = ref<HTMLCanvasElement | null>(null);
@@ -46,9 +47,21 @@
 		//time
 		const clock = new THREE.Clock();
 
-		// Set initial scale and direction of scaling
-		let scaleIncrement = 0.02; // How much the scale changes each frame
-		let scaleDirection = 1; // 1 for growing, -1 for shrinking
+		function animateCube() {
+			// Create a Tween to animate the cube's scale
+			const tween = new TWEEN.Tween(cube.scale)
+				.to({ y: 2 }, 1000) // Target scale and duration
+				.easing(TWEEN.Easing.Quadratic.InOut) // Easing function
+				.start(); // Start the animation
+
+			// Update the scene after animation
+			tween.onUpdate(() => {
+				renderer.render(scene, camera);
+			});
+
+			// Request the next frame
+			requestAnimationFrame(animateCube);
+		}
 
 		// animation
 		function render() {
@@ -61,15 +74,9 @@
 				camera.updateProjectionMatrix();
 			}
 
-			cube.scale.y += scaleIncrement * scaleDirection;
-
-			// If the cube scale reaches certain limits, change the direction
-			if (cube.scale.y <= 0.2 || cube.scale.y >= 2) {
-				scaleDirection *= -1; // Reverse the direction
-			}
-
 			renderer.render(scene, camera);
 			requestAnimationFrame(render);
+			animateCube();
 		}
 		render();
 	});
