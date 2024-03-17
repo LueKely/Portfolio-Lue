@@ -5,12 +5,12 @@
 <script setup lang="ts">
 	import { ref, onMounted } from 'vue';
 	import * as THREE from 'three';
-	import CanvasUtils from '@/utils/CanvasUtils';
+	import canvasUtils from '@/utils/canvasUtils';
 
 	const homeCanvas = ref<HTMLCanvasElement | null>(null);
 
 	onMounted(() => {
-		CanvasUtils.validateCanvas(homeCanvas.value);
+		canvasUtils.validateCanvas(homeCanvas.value);
 		// rederer
 		const renderer: THREE.WebGLRenderer = new THREE.WebGLRenderer({
 			antialias: true,
@@ -45,7 +45,7 @@
 			// const deltaTime = clock.getDelta();
 			// resizes the display
 
-			if (CanvasUtils.resizeRendererToDisplaySize(renderer)) {
+			if (canvasUtils.resizeRendererToDisplaySize(renderer)) {
 				const canvas = renderer.domElement;
 				camera.aspect = canvas.width / canvas.height;
 				camera.updateProjectionMatrix();
@@ -68,3 +68,4 @@
 		display: block;
 	}
 </style>
+@/utils/canvasUtils
