@@ -19,4 +19,9 @@ export default {
 			throw new Error('Canvas element is Null');
 		}
 	},
+	addAllMeshToScene: (scene: THREE.Scene, MeshGroup: THREE.Mesh[]) => {
+		MeshGroup.forEach((meshObj: THREE.Mesh) => {
+			scene.add(meshObj);
+		});
+	},
 };

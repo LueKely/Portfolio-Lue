@@ -23,7 +23,7 @@
 		const camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(
 			...Object.values(cameraData)
 		);
-		camera.position.z = 30;
+		camera.position.z = 5;
 
 		//scene
 		const scene: THREE.Scene = new THREE.Scene();
@@ -37,12 +37,22 @@
 		light.position.set(-1, 2, 4);
 		scene.add(light);
 
+		const geometry = new THREE.BoxGeometry(1, 0.05, 1);
+		const material = new THREE.MeshBasicMaterial({ color: 0x372d12 });
+		const cube: THREE.Mesh = new THREE.Mesh(geometry, material);
+
+		scene.add(cube);
+
 		//time
 		const clock = new THREE.Clock();
 
+		// Set initial scale and direction of scaling
+		let scaleIncrement = 0.02; // How much the scale changes each frame
+		let scaleDirection = 1; // 1 for growing, -1 for shrinking
+
 		// animation
 		function render() {
-			// const deltaTime = clock.getDelta();
+			const deltaTime = clock.getDelta();
 			// resizes the display
 
 			if (canvasUtils.resizeRendererToDisplaySize(renderer)) {
@@ -51,9 +61,12 @@
 				camera.updateProjectionMatrix();
 			}
 
-			// convert time to seconds
-			// shapeMesh.rotation.x += deltaTime;
-			// shapeMesh.rotation.y -= 1 * deltaTime;
+			cube.scale.y += scaleIncrement * scaleDirection;
+
+			// If the cube scale reaches certain limits, change the direction
+			if (cube.scale.y <= 0.2 || cube.scale.y >= 2) {
+				scaleDirection *= -1; // Reverse the direction
+			}
 
 			renderer.render(scene, camera);
 			requestAnimationFrame(render);
