@@ -48,10 +48,6 @@
 		//time
 		const clock = new THREE.Clock();
 
-		// Set initial scale and direction of scaling
-		let scaleIncrement = 0.01; // How much the scale changes each frame
-		let scaleDirection = 1; // 1 for growing, -1 for shrinking
-
 		// animation
 		function render() {
 			const deltaTime = clock.getDelta();
@@ -62,17 +58,10 @@
 				camera.aspect = canvas.width / canvas.height;
 				camera.updateProjectionMatrix();
 			}
-
-			cube.scale.y += scaleIncrement * scaleDirection;
-			// console.log(cube.scale.y);
-
-			// If the cube scale reaches certain limits, change the direction
-			if (cube.scale.y <= 0.2 || cube.scale.y >= 1.5) {
-				scaleDirection *= -1; // Reverse the direction
-			}
-
 			renderer.render(scene, camera);
 			requestAnimationFrame(render);
+
+			cube.scale.y = 0.5 + Math.sin(Date.now() * 0.0008) * 1;
 		}
 		render();
 	});
