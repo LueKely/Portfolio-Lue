@@ -37,9 +37,11 @@
 		light.position.set(-1, 2, 4);
 		scene.add(light);
 
-		const geometry = new THREE.BoxGeometry(3.5, 0.05, 1);
+		const geometry = new THREE.PlaneGeometry(2, 0.5);
 		const material = new THREE.MeshBasicMaterial({ color: 0x372d12 });
 		const cube: THREE.Mesh = new THREE.Mesh(geometry, material);
+
+		cube.position.setY(2);
 
 		scene.add(cube);
 
@@ -47,7 +49,7 @@
 		const clock = new THREE.Clock();
 
 		// Set initial scale and direction of scaling
-		let scaleIncrement = 0.03; // How much the scale changes each frame
+		let scaleIncrement = 0.01; // How much the scale changes each frame
 		let scaleDirection = 1; // 1 for growing, -1 for shrinking
 
 		// animation
@@ -62,10 +64,10 @@
 			}
 
 			cube.scale.y += scaleIncrement * scaleDirection;
-			console.log(cube.scale.y);
+			// console.log(cube.scale.y);
 
 			// If the cube scale reaches certain limits, change the direction
-			if (cube.scale.y <= 0.2 || cube.scale.y >= 4) {
+			if (cube.scale.y <= 0.2 || cube.scale.y >= 1.5) {
 				scaleDirection *= -1; // Reverse the direction
 			}
 
