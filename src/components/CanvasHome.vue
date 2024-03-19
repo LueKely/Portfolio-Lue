@@ -74,7 +74,7 @@
 		scene.add(groupB);
 		groupA.position.setX(-2.5);
 		groupB.position.setX(2.5);
-
+		groupB.rotateOnAxis(new THREE.Vector3(0, 0, 1), Math.PI);
 		//time
 		const clock = new THREE.Clock();
 
