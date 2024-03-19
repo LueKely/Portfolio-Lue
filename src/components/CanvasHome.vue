@@ -34,34 +34,95 @@
 		const color = 0xffffff;
 		const intensity = 3;
 		const light = new THREE.DirectionalLight(color, intensity);
+
 		light.position.set(-1, 2, 4);
 		scene.add(light);
 
-		const geometry = new THREE.PlaneGeometry(2, 0.5);
-		const material = new THREE.MeshBasicMaterial({ color: 0x372d12 });
-		const cube: THREE.Mesh = new THREE.Mesh(geometry, material);
+		const groupA: THREE.Group = new THREE.Group();
+		const groupB: THREE.Group = new THREE.Group();
 
-		cube.position.setY(2);
+		const rowAPlaneMesh: THREE.Mesh[] = [];
+		const rowBPlaneMesh: THREE.Mesh[] = [];
 
-		scene.add(cube);
+		const geometry = new THREE.PlaneGeometry(4.8, 0.05);
+		const basicMaterial = new THREE.MeshBasicMaterial({ color: 0x372d12 });
 
+		const geometryB = new THREE.PlaneGeometry(4.8, 0.05);
+		const basicMaterialB = new THREE.MeshBasicMaterial({ color: 0x372d12 });
+
+		for (let index = -8; index < 8; index++) {
+			const planeMesh = new THREE.Mesh(geometry, basicMaterial);
+			rowAPlaneMesh.push(planeMesh);
+			planeMesh.position.set(0, index * 0.5, 0);
+		}
+
+		for (let index = -8; index < 8; index++) {
+			const planeMesh = new THREE.Mesh(geometryB, basicMaterialB);
+			rowBPlaneMesh.push(planeMesh);
+			planeMesh.position.set(0, index * 0.5, 0);
+		}
+
+		rowAPlaneMesh.forEach((plane: THREE.Mesh) => {
+			groupA.add(plane);
+		});
+
+		rowBPlaneMesh.forEach((plane: THREE.Mesh) => {
+			groupB.add(plane);
+		});
+
+		scene.add(groupA);
+		scene.add(groupB);
+		groupA.position.setX(-2.5);
+		groupB.position.setX(2.5);
+		groupB.rotateOnAxis(new THREE.Vector3(0, 0, 1), Math.PI);
 		//time
 		const clock = new THREE.Clock();
 
-		// animation
-		function render() {
-			const deltaTime = clock.getDelta();
-			// resizes the display
+		const scaleIncrement = 0.05; // Increment for scaling
 
+		let scaleDirectionA = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; // Direction of scaling
+		let scaleDirectionB = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+		// animation
+
+		function render() {
+			// resizes the display
 			if (canvasUtils.resizeRendererToDisplaySize(renderer)) {
 				const canvas = renderer.domElement;
-				camera.aspect = canvas.width / canvas.height;
+				camera.aspect = canvas.clientWidth / canvas.clientWidth;
 				camera.updateProjectionMatrix();
 			}
 			renderer.render(scene, camera);
 			requestAnimationFrame(render);
 
-			cube.scale.y = 0.5 + Math.sin(Date.now() * 0.0008) * 1;
+			// for (let index = 0; index < groupA.children.length; index++) {
+			// 	console.log(index);
+
+			// 	setTimeout(() => {
+			// 		const plane = groupA.children[index];
+			// 		plane.scale.y += scaleIncrement * scaleDirectionA[index];
+			// 		if (plane.scale.y <= 1 || plane.scale.y >= 8) {
+			// 			scaleDirectionA[index] *= -1; // Reverse the direction
+			// 		}
+			// 	}, 200 + index * 100);
+			// }
+
+			groupA.children.forEach((plane: THREE.Object3D, index) => {
+				setTimeout(() => {
+					plane.scale.y += scaleIncrement * scaleDirectionA[index];
+					if (plane.scale.y <= 1 || plane.scale.y >= 10) {
+						scaleDirectionA[index] *= -1; // Reverse the direction
+					}
+				}, 250 * index);
+			});
+
+			groupB.children.forEach((plane: THREE.Object3D, index) => {
+				setTimeout(() => {
+					plane.scale.y += scaleIncrement * scaleDirectionB[index];
+					if (plane.scale.y <= 1 || plane.scale.y >= 10) {
+						scaleDirectionB[index] *= -1; // Reverse the direction
+					}
+				}, 250 * index);
+			});
 		}
 		render();
 	});

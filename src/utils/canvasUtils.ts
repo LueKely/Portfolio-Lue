@@ -24,4 +24,9 @@ export default {
 			scene.add(meshObj);
 		});
 	},
+	addAllMeshToPoint: (parentMesh: THREE.Mesh, ChildrenMesh: THREE.Mesh[]) => {
+		ChildrenMesh.forEach((childMesh: THREE.Mesh) => {
+			parentMesh.add(childMesh);
+		});
+	},
 };
