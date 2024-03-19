@@ -78,7 +78,8 @@
 		//time
 		const clock = new THREE.Clock();
 
-		const scaleIncrement = 0.1; // Increment for scaling
+		const scaleIncrement = 0.05; // Increment for scaling
+
 		let scaleDirectionA = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; // Direction of scaling
 		let scaleDirectionB = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
 		// animation
@@ -93,29 +94,35 @@
 			renderer.render(scene, camera);
 			requestAnimationFrame(render);
 
-			for (let index = 0; index < groupA.children.length; index++) {
-				console.log(index);
+			// for (let index = 0; index < groupA.children.length; index++) {
+			// 	console.log(index);
 
+			// 	setTimeout(() => {
+			// 		const plane = groupA.children[index];
+			// 		plane.scale.y += scaleIncrement * scaleDirectionA[index];
+			// 		if (plane.scale.y <= 1 || plane.scale.y >= 8) {
+			// 			scaleDirectionA[index] *= -1; // Reverse the direction
+			// 		}
+			// 	}, 200 + index * 100);
+			// }
+
+			groupA.children.forEach((plane: THREE.Object3D, index) => {
 				setTimeout(() => {
-					const plane = groupA.children[index];
 					plane.scale.y += scaleIncrement * scaleDirectionA[index];
-					if (plane.scale.y <= 1 || plane.scale.y >= 8) {
+					if (plane.scale.y <= 1 || plane.scale.y >= 10) {
 						scaleDirectionA[index] *= -1; // Reverse the direction
 					}
-				}, 200 + index * 100);
-			}
+				}, 250 * index);
+			});
 
-			for (let index = groupB.children.length - 1; index >= 0; index--) {
-				console.log(index);
-
+			groupB.children.forEach((plane: THREE.Object3D, index) => {
 				setTimeout(() => {
-					const plane = groupB.children[index];
 					plane.scale.y += scaleIncrement * scaleDirectionB[index];
-					if (plane.scale.y <= 1 || plane.scale.y >= 8) {
+					if (plane.scale.y <= 1 || plane.scale.y >= 10) {
 						scaleDirectionB[index] *= -1; // Reverse the direction
 					}
-				}, 200 + index * 100);
-			}
+				}, 250 * index);
+			});
 		}
 		render();
 	});
