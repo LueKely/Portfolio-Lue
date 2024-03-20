@@ -83,10 +83,10 @@
 		let scaleDirectionA: number[] = []; // Direction of scaling
 		let scaleDirectionB: number[] = [];
 
-		rowAPlaneMesh.map((plane) => {
+		rowAPlaneMesh.map(() => {
 			scaleDirectionA.push(1);
 		});
-		rowBPlaneMesh.map((plane) => {
+		rowBPlaneMesh.map(() => {
 			scaleDirectionB.push(1);
 		});
 
