@@ -80,8 +80,16 @@
 
 		const scaleIncrement = 0.05; // Increment for scaling
 
-		let scaleDirectionA = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]; // Direction of scaling
-		let scaleDirectionB = [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1];
+		let scaleDirectionA: number[] = []; // Direction of scaling
+		let scaleDirectionB: number[] = [];
+
+		rowAPlaneMesh.map((plane) => {
+			scaleDirectionA.push(1);
+		});
+		rowBPlaneMesh.map((plane) => {
+			scaleDirectionB.push(1);
+		});
+
 		// animation
 
 		function render() {
@@ -93,18 +101,6 @@
 			}
 			renderer.render(scene, camera);
 			requestAnimationFrame(render);
-
-			// for (let index = 0; index < groupA.children.length; index++) {
-			// 	console.log(index);
-
-			// 	setTimeout(() => {
-			// 		const plane = groupA.children[index];
-			// 		plane.scale.y += scaleIncrement * scaleDirectionA[index];
-			// 		if (plane.scale.y <= 1 || plane.scale.y >= 8) {
-			// 			scaleDirectionA[index] *= -1; // Reverse the direction
-			// 		}
-			// 	}, 200 + index * 100);
-			// }
 
 			groupA.children.forEach((plane: THREE.Object3D, index) => {
 				setTimeout(() => {
