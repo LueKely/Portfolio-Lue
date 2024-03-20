@@ -23,7 +23,7 @@
 		const camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(
 			...Object.values(cameraData)
 		);
-		camera.position.z = 5;
+		camera.position.z = 8;
 
 		//scene
 		const scene: THREE.Scene = new THREE.Scene();
@@ -50,13 +50,13 @@
 		const geometryB = new THREE.PlaneGeometry(4.8, 0.05);
 		const basicMaterialB = new THREE.MeshBasicMaterial({ color: 0x372d12 });
 
-		for (let index = -8; index < 8; index++) {
+		for (let index = -10; index < 11; index++) {
 			const planeMesh = new THREE.Mesh(geometry, basicMaterial);
 			rowAPlaneMesh.push(planeMesh);
 			planeMesh.position.set(0, index * 0.5, 0);
 		}
 
-		for (let index = -8; index < 8; index++) {
+		for (let index = -10; index < 11; index++) {
 			const planeMesh = new THREE.Mesh(geometryB, basicMaterialB);
 			rowBPlaneMesh.push(planeMesh);
 			planeMesh.position.set(0, index * 0.5, 0);
@@ -72,8 +72,9 @@
 
 		scene.add(groupA);
 		scene.add(groupB);
-		groupA.position.setX(-2.5);
-		groupB.position.setX(2.5);
+		groupA.position.setX(-1.5);
+		groupB.position.setX(3.5);
+
 		groupB.rotateOnAxis(new THREE.Vector3(0, 0, 1), Math.PI);
 		//time
 		const clock = new THREE.Clock();
