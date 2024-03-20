@@ -29,11 +29,15 @@
 				</div>
 			</div>
 		</div>
-		<div class="canvas-wrapper"><canvas></canvas></div>
+		<div class="canvas-wrapper">
+			<CanvasAbout></CanvasAbout>
+		</div>
 	</section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+	import CanvasAbout from '@/components/CanvasAbout.vue';
+</script>
 
 <style scoped lang="scss">
 	.text-wrapper {
@@ -46,6 +50,7 @@
 	}
 	.canvas-wrapper {
 		flex: 1.4;
+		display: flex;
 	}
 
 	.underline-wrapper {
