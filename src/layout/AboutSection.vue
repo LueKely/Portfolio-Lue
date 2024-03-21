@@ -49,6 +49,8 @@
 		height: 100%;
 	}
 	.canvas-wrapper {
+		height: 100%;
+
 		flex: 1.4;
 		display: flex;
 	}

@@ -25,7 +25,7 @@
 		const camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(
 			...Object.values(cameraData)
 		);
-		camera.position.z = 20;
+		camera.position.z = 15;
 
 		//scene
 		const scene: THREE.Scene = new THREE.Scene();
@@ -40,9 +40,9 @@
 		light.position.set(-1, 2, 4);
 		scene.add(light);
 
-		const geo = new THREE.PlaneGeometry(35, 35, 30, 30);
+		const geo = new THREE.PlaneGeometry(15, 15, 15, 15);
 		const shapeMaterial = new THREE.ShaderMaterial({
-			wireframe: true,
+			wireframe: false,
 			side: THREE.DoubleSide,
 			uniforms: {
 				u_resolution: {
