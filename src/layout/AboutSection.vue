@@ -25,7 +25,7 @@
 				</div>
 				<div>
 					<div class="underline-wrapper"><h2>Email</h2></div>
-					<p class="email">test@gmail.com</p>
+					<p class="email">luebuiss@gmail.com</p>
 				</div>
 			</div>
 		</div>
@@ -49,6 +49,7 @@
 		height: 100%;
 	}
 	.canvas-wrapper {
+		padding-left: 20px;
 		height: 100%;
 
 		flex: 1.4;

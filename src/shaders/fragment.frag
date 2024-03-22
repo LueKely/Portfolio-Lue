@@ -72,7 +72,7 @@ void main() {
     // uv.y += sin(uv.x + uv.y )  + (time / 20.0) ;
 
      
-   uv.y += perlin(uv.xy*1.,11.) +time/10. ;
+   uv.y += perlin(uv.xy-time/10.,5.,10.) +time/10. ;
     vec3 color = vec3(0.0);
 
 
