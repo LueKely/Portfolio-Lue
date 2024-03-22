@@ -27,15 +27,15 @@ void main() {
     // uv.x -=time/2.0;
     // uv.y += sin(uv.x + uv.y )  + (time / 20.0) ;
 
-   uv.y += sin(uv.x + pnoise(uv+time/10.0))   ;
-   uv.x += sin(uv.y  + pnoise(uv+time/10.0))   ;
+   uv.xy += (pnoise(uv+time/5.0)*1.5 + uv.y)   ;
+//    uv.x += (uv.y  + pnoise(uv+time/5.0)) * sin(time) ;
     vec3 color = vec3(0.0);
 
 
     float frequency = 21.0;
     float checkerY = floor(uv.y * frequency);
     // float checkerX = floor(uv.x * frequency);
-    float checker = mod(checkerY,2.0);
+    float checker = mod(checkerY,3.0);
 
 
 
