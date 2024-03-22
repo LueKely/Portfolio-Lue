@@ -25,7 +25,7 @@
 		const camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(
 			...Object.values(cameraData)
 		);
-		camera.position.z = 12;
+		camera.position.z = 15;
 
 		//scene
 		const scene: THREE.Scene = new THREE.Scene();
@@ -40,7 +40,7 @@
 		light.position.set(-1, 2, 4);
 		scene.add(light);
 
-		const geo = new THREE.PlaneGeometry(15, 15, 20, 20);
+		const geo = new THREE.PlaneGeometry(20, 20, 20, 20);
 		const shapeMaterial = new THREE.ShaderMaterial({
 			wireframe: false,
 			side: THREE.DoubleSide,
@@ -49,13 +49,6 @@
 					value: new THREE.Vector2(),
 				}, // This will be automatically set by Three.js
 				time: { value: 0.0 }, // Initialize time to 0
-				lines: {
-					value: [
-						new THREE.Vector3(1, 2, 3), // Line 1 start
-						new THREE.Vector3(4, 5, 6), // Line 1 end
-						// Repeat for other lines
-					],
-				},
 			},
 			vertexShader: vertex,
 			fragmentShader: fragment,
