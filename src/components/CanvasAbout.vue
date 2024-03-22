@@ -25,7 +25,7 @@
 		const camera: THREE.PerspectiveCamera = new THREE.PerspectiveCamera(
 			...Object.values(cameraData)
 		);
-		camera.position.z = 15;
+		camera.position.z = 13;
 
 		//scene
 		const scene: THREE.Scene = new THREE.Scene();
