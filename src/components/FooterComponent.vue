@@ -7,28 +7,28 @@
 				Anunciacion.
 			</p>
 			<hr />
-		</div>
-		<!-- <div class="contact-me">
-			<h2>Contact Me</h2>
-			<div class="link-wrapper">
-				<div>
-					<div class="underline-wrapper">
-						<p class="title">Github</p>
-					</div>
+			<div>
+				<h2>Contact Me</h2>
+				<div class="details-wrapper">
+					<p>Github: &nbsp;</p>
 					<a target="_blank" href="https://github.com/LueKely">@Lue Kely</a>
 				</div>
-				<div>
-					<div class="underline-wrapper"><p class="title">Email</p></div>
-					<p class="email">luebuiss@gmail.com</p>
+				<div class="details-wrapper">
+					<p>Email:</p>
+					<p class="email">&nbsp;luebuiss@gmail.com</p>
 				</div>
 			</div>
-		</div> -->
+		</div>
 	</footer>
 </template>
 
 <script setup lang="ts"></script>
 
 <style scoped lang="scss">
+	.details-wrapper {
+		display: flex;
+	}
+
 	hr {
 		width: 100%;
 		color: var(--clr-brown-300);
@@ -36,12 +36,11 @@
 	footer {
 		background-color: var(--clr-brown-200);
 
-		height: 40dvh;
 		display: flex;
 		align-items: flex-start;
-		justify-content: start;
+		justify-content: flex-start;
 		flex-direction: column;
-		padding-top: 30px;
+		padding-block: 10px;
 		padding-inline: 20px;
 	}
 
@@ -77,11 +76,10 @@
 
 	.logo-wrapper > img {
 		aspect-ratio: 1/1;
-		width: clamp(1.2rem, 5vw, 3.5rem);
+		width: clamp(1.2rem, 5vw, 2.5rem);
 	}
 	.logo-wrapper > p {
 		font-family: var(--ff-bold);
-		font-size: var(--fs-m);
 	}
 	.title {
 		font-family: var(--ff-regular);
