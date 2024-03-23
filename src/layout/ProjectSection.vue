@@ -29,13 +29,14 @@
 	}
 
 	.card-wrapper {
+		align-self: center;
 		padding-top: 20px;
 		width: 100%;
 		// background-color: red;
 		display: flex;
 		align-items: center;
 		justify-content: flex-start;
-		column-gap: 15px;
+		column-gap: 20px;
 		row-gap: 70px;
 		flex-wrap: wrap;
 	}
