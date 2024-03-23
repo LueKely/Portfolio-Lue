@@ -5,7 +5,7 @@
 				<div>
 					<h1>About Me</h1>
 				</div>
-				<div class="underline-wrapper">
+				<div class="underline-wrapper skill-container">
 					<h2 class="skill">Skills</h2>
 				</div>
 				<ul>
@@ -13,20 +13,8 @@
 					<li>JS Front & Backend Frameworks</li>
 					<li>JS libraries like Typescript</li>
 					<li>Databases such as Mongo</li>
+					<li>GLSL</li>
 				</ul>
-			</div>
-
-			<div class="link-wrapper">
-				<div>
-					<div class="underline-wrapper">
-						<h2>Github</h2>
-					</div>
-					<a target="_blank" href="https://github.com/LueKely">@Lue Kely</a>
-				</div>
-				<div>
-					<div class="underline-wrapper"><h2>Email</h2></div>
-					<p class="email">luebuiss@gmail.com</p>
-				</div>
 			</div>
 		</div>
 		<div class="canvas-wrapper">
@@ -61,9 +49,6 @@
 		// margin-top: 20px;
 	}
 
-	.email {
-		text-decoration: underline;
-	}
 	ul {
 		list-style-position: inside;
 		text-indent: -2rem;
@@ -73,13 +58,10 @@
 		font-family: var(--ff-light);
 	}
 
-	.link-wrapper {
-		width: 100%;
-		display: flex;
-		align-items: flex-start;
-		justify-content: space-between;
-	}
 	.skill {
+		margin-top: 40px;
 		margin-bottom: 1rem;
+	}
+	.skill-container {
 	}
 </style>
