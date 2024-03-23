@@ -21,7 +21,7 @@
 					Collaborating with Colleagues.
 				</p>
 				<div class="button-wrapper">
-					<button>Check My CV</button>
+					<a href="/Resume.pdf" target="_blank">Check My CV</a>
 				</div>
 			</div>
 		</div>
@@ -80,12 +80,15 @@
 
 		width: 100%;
 		border-top: 1px #c5bdac solid;
-		button {
+		a {
 			border-radius: 100px;
 			padding: 5px 10px;
 			background-color: var(--clr-brown-300);
 			color: var(--clr-brown-100) !important;
 			font-size: var(--fs-sm);
+			cursor: pointer;
+			font-family: var(--ff-bold);
+			text-decoration: none;
 		}
 	}
 	.canvas-container {

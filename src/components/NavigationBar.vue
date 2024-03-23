@@ -39,7 +39,7 @@
 				>
 			</li>
 		</ul>
-		<button class="desktop">Check My CV</button>
+		<a class="desktop" href="/Resume.pdf" target="_blank">Check My CV</a>
 		<button class="burger">Borgar</button>
 	</nav>
 
@@ -158,7 +158,7 @@
 		}
 	}
 
-	button.desktop {
+	a.desktop {
 		@include break.tablet {
 			display: none;
 		}
@@ -169,6 +169,12 @@
 		padding: 5px 10px;
 		background-color: var(--clr-brown-300);
 		color: var(--clr-brown-100) !important;
+		cursor: pointer;
+		font-family: var(--ff-bold);
+	}
+
+	a.desktop:hover {
+		text-decoration: none;
 	}
 
 	aside.burger {
