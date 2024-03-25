@@ -8,19 +8,21 @@
 				<h1>About Me</h1>
 				<!-- bio -->
 				<ul>
+					<li>He/Him</li>
 					<li>21 Years Old</li>
 					<li>Based In The Philippines</li>
 					<li>3rd Year College Student</li>
+					<li>In CvSU Bacoor</li>
 				</ul>
 				<!-- skills -->
 				<ul>
-					<li>JS Frameworks</li>
 					<li>HTML, CSS and JS</li>
-					<li>Mongo DB</li>
+					<li>JS Frameworks</li>
 					<li>SQL (MySql & Postgres)</li>
 					<li>SASS & Tailwind</li>
 					<li>Typescript</li>
 					<li>Express Js</li>
+					<li>Mongo DB</li>
 					<li>GLSL</li>
 				</ul>
 			</div>
@@ -29,6 +31,8 @@
 				<h1>a</h1>
 				<h2>Biography</h2>
 				<ul>
+					<li>a</li>
+					<li>a</li>
 					<li>a</li>
 					<li>a</li>
 					<li>a</li>
@@ -98,7 +102,7 @@
 		padding-right: 20px;
 		height: 100%;
 
-		flex: 0.5;
+		flex: 0.6;
 		display: flex;
 	}
 
