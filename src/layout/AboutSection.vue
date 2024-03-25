@@ -1,5 +1,8 @@
 <template>
 	<section id="about">
+		<div class="canvas-wrapper">
+			<CanvasAbout></CanvasAbout>
+		</div>
 		<div class="text-wrapper">
 			<div class="wrapper">
 				<div>
@@ -16,9 +19,6 @@
 					<li>GLSL</li>
 				</ul>
 			</div>
-		</div>
-		<div class="canvas-wrapper">
-			<CanvasAbout></CanvasAbout>
 		</div>
 	</section>
 </template>
@@ -37,10 +37,10 @@
 		height: 100%;
 	}
 	.canvas-wrapper {
-		padding-left: 20px;
+		padding-right: 20px;
 		height: 100%;
 
-		flex: 1.4;
+		flex: 0.8;
 		display: flex;
 	}
 

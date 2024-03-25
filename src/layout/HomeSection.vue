@@ -52,7 +52,7 @@
 
 	.text-container {
 		height: 100%;
-
+		flex: 1;
 		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
@@ -79,21 +79,19 @@
 		padding-top: 10px;
 
 		width: 100%;
-		border-top: 1px #c5bdac solid;
 		a {
-			border-radius: 100px;
-			padding: 5px 10px;
-			background-color: var(--clr-brown-300);
-			color: var(--clr-brown-100) !important;
-			font-size: var(--fs-sm);
 			cursor: pointer;
 			font-family: var(--ff-bold);
 			text-decoration: none;
 		}
+
+		a:hover {
+			text-decoration: underline;
+		}
 	}
 	.canvas-container {
 		height: 100%;
-		flex: 1.4;
+		flex: 0.8;
 		padding: 10px;
 		display: flex;
 	}
