@@ -77,9 +77,11 @@
 
 <script setup lang="ts">
 	import { ref, onMounted } from 'vue';
+	import { useRouter } from 'vue-router';
 
 	type ValidatorFunction = (value: number, base: number) => boolean;
 
+	const router = useRouter();
 	const currentSection = ref<number>(1);
 	const sectionList = ref<number[]>([1, 2, 3]);
 
@@ -105,6 +107,8 @@
 				entries.forEach((entry) => {
 					if (entry.isIntersecting) {
 						currentSectionName.value = entry.target.getAttribute('id');
+
+						router.push(`#${entry.target.getAttribute('id')}`);
 					}
 				});
 			},
