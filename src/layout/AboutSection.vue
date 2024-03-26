@@ -48,6 +48,25 @@
 </script>
 
 <style scoped lang="scss">
+	p,
+	.list > ul > li,
+	h2,
+	.list > h1,
+	button {
+		animation-name: fadeToColor;
+		animation-duration: 250ms;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes fadeToColor {
+		from {
+			color: transparent;
+		}
+		to {
+			color: var(--clr-brown-300);
+		}
+	}
 	.titles,
 	.list {
 		height: 100%;
