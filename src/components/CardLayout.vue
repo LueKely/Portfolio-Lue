@@ -44,10 +44,25 @@
 </script>
 
 <style lang="scss" scoped>
-	// todo:
-	//add clamp width and clamp height
-	// add bg on button cv
-	// if it is has height then must use flex
+	h1,
+	.text-wrapper,
+	a,
+	.text-wrapper > p {
+		animation-name: fadeToColor;
+		animation-duration: 250ms;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes fadeToColor {
+		from {
+			color: transparent;
+		}
+		to {
+			color: var(--clr-brown-300);
+		}
+	}
+
 	article {
 		min-width: 280px;
 		width: 20vh;

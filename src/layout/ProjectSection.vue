@@ -22,6 +22,22 @@
 </script>
 
 <style scoped lang="scss">
+	h1 {
+		animation-name: fadeToColor;
+		animation-duration: 250ms;
+		animation-timing-function: ease-in-out;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes fadeToColor {
+		from {
+			color: transparent;
+		}
+		to {
+			color: var(--clr-brown-300);
+		}
+	}
+
 	#projects {
 		flex-direction: column;
 		align-items: flex-start;
