@@ -127,8 +127,8 @@
 
 <style scoped>
 	#canvas-home {
-		flex: 1;
 		display: block;
+		width: 100%;
+		height: 100%;
 	}
 </style>
-@/utils/canvasUtils

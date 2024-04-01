@@ -93,7 +93,6 @@
 		height: 100%;
 		flex: 0.8;
 		padding: 10px;
-		display: flex;
 	}
 </style>
 <script setup lang="ts">

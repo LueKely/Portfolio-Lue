@@ -3,11 +3,14 @@ section {
 	align-items: center;
 	justify-content: center;
 	height: 95vh;
+
 	padding: clamp(0.5rem, 2vw, 1.5rem);
 }
 
-section#projects,
-section#about {
+section#projects {
 	height: auto;
 	min-height: 90vh;
+}
+section#about {
+	min-height: 95vh;
 }
