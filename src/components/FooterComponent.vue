@@ -30,8 +30,8 @@
 	}
 
 	hr {
+		border: 1px solid var(--clr-brown-300);
 		width: 100%;
-		color: var(--clr-brown-300);
 	}
 	footer {
 		background-color: var(--clr-brown-200);
