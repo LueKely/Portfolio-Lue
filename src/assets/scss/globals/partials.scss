@@ -6,7 +6,8 @@ section {
 	padding: clamp(0.5rem, 2vw, 1.5rem);
 }
 
-section#projects {
+section#projects,
+section#about {
 	height: auto;
 	min-height: 90vh;
 }
