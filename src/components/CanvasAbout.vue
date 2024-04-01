@@ -86,7 +86,8 @@
 
 <style lang="scss" scoped>
 	#canvas-about {
-		flex: 1;
+		width: 100%;
+		height: 100%;
 		display: block;
 	}
 </style>
