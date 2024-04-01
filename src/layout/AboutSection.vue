@@ -120,9 +120,11 @@
 	.canvas-wrapper {
 		padding-right: 20px;
 		height: 100%;
-
 		flex: 0.6;
 		display: flex;
+		* > {
+			flex: 1;
+		}
 	}
 
 	ul {
