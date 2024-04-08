@@ -90,6 +90,10 @@
 		}
 	}
 	.canvas-container {
+		@include break.tablet {
+			display: none;
+		}
+
 		height: 100%;
 		flex: 0.8;
 		padding: 10px;
