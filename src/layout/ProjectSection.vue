@@ -56,5 +56,9 @@
 		column-gap: 20px;
 		row-gap: 70px;
 		flex-wrap: wrap;
+
+		@include break.tablet {
+			justify-content: center;
+		}
 	}
 </style>

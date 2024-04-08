@@ -118,6 +118,10 @@
 		height: 100%;
 	}
 	.canvas-wrapper {
+		@include break.tablet {
+			display: none;
+		}
+
 		padding-right: 20px;
 		height: 100%;
 		flex: 0.6;

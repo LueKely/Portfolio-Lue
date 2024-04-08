@@ -1,3 +1,5 @@
+@use '../base/breakpoints' as break;
+
 :root {
 	--fs-sm: clamp(0.75rem, 2vw, 1.2rem);
 	--fs-m: clamp(1rem, 2vw, 2rem);
@@ -8,6 +10,20 @@
 	--ff-bold: 'MonaSans-Bold', sans-serif;
 	--ff-light: 'MonaSans-Light', sans-serif;
 	--ff-medium: 'MonaSans-Medium', sans-serif;
+
+	@include break.tablet {
+		--fs-sm: clamp(1rem, 2vw, 1.2rem);
+		--fs-m: clamp(1.5rem, 2vw, 2rem);
+		--fs-l: clamp(2.75rem, 3vw, 3rem);
+		--fs-xl: clamp(3rem, 4.5vw, 6rem);
+	}
+
+	@include break.phone {
+		--fs-sm: clamp(0.75rem, 2vw, 1.2rem);
+		--fs-m: clamp(1.25rem, 2vw, 2rem);
+		--fs-l: clamp(2rem, 3vw, 3rem);
+		--fs-xl: clamp(2.5rem, 4.5vw, 6rem);
+	}
 
 	--clr-brown-100: #f6edd7;
 	--clr-brown-200: #d0c4a5;
