@@ -1,6 +1,16 @@
 [
 	{
 		"tags": [
+			{ "name": "Solo Project", "color": "#41c68a" },
+			{ "name": "Case Study", "color": "#e8b614" }
+		],
+		"title": "MF18",
+		"description": "An Audio Visualizer using GLSL and Three.js.",
+		"link": "https://audio-visualizer-chi.vercel.app/"
+	},
+
+	{
+		"tags": [
 			{ "name": "UX Lead", "color": "#e17aef" },
 			{ "name": "Team Project", "color": "#d83674" }
 		],
