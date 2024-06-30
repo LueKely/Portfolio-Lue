@@ -4,6 +4,15 @@
 			{ "name": "Solo Project", "color": "#41c68a" },
 			{ "name": "Case Study", "color": "#e8b614" }
 		],
+		"title": "Mighty Wizards The Game",
+		"description": "A small video game i made",
+		"link": "https://github.com/LueKely/Mighty-Wizards-The-Game"
+	},
+	{
+		"tags": [
+			{ "name": "Solo Project", "color": "#41c68a" },
+			{ "name": "Case Study", "color": "#e8b614" }
+		],
 		"title": "MF18",
 		"description": "An Audio Visualizer using GLSL and Three.js.",
 		"link": "https://audio-visualizer-chi.vercel.app/"
