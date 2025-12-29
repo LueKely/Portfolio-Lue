@@ -1,75 +1,94 @@
 [
-	{
-		"tags": [
-			{ "name": "Solo Project", "color": "#41c68a" },
-			{ "name": "Case Study", "color": "#e8b614" }
-		],
-		"title": "Mighty Wizards The Game",
-		"description": "A small video game i made",
-		"link": "https://github.com/LueKely/Mighty-Wizards-The-Game"
-	},
-	{
-		"tags": [
-			{ "name": "Solo Project", "color": "#41c68a" },
-			{ "name": "Case Study", "color": "#e8b614" }
-		],
-		"title": "MF18",
-		"description": "An Audio Visualizer using GLSL and Three.js.",
-		"link": "https://audio-visualizer-chi.vercel.app/"
-	},
+  {
+    "tags": [
+      { "name": "Thesis", "color": "#41c68a" },
 
-	{
-		"tags": [
-			{ "name": "UX Lead", "color": "#e17aef" },
-			{ "name": "Team Project", "color": "#d83674" }
-		],
-		"title": "Echoes Tracker",
-		"description": "Echoes Tracker is a real time web-based location tracker for students and teachers a-like. ",
-		"link": "https://github.com/pangilinanervin22/echoes-track-frontend"
-	},
-	{
-		"tags": [
-			{ "name": "Team Project", "color": "#d83674" },
-			{ "name": "UX Lead", "color": "#e17aef" }
-		],
-		"title": "What's Your Ulam",
-		"description": "What's Your Ulam a web-based recipe sharing platform.",
-		"link": "https://github.com/LueKely/WYU-Frontend"
-	},
-	{
-		"tags": [
-			{ "name": "Project Manager", "color": "#3d45ce" },
-			{ "name": "Team Project", "color": "#d83674" }
-		],
-		"title": "Gym Circle",
-		"description": "Gym Circle is a Web base gym subscription service.",
-		"link": "https://github.com/LueKely/GymCircle"
-	},
-	{
-		"tags": [
-			{ "name": "Solo Project", "color": "#41c68a" },
-			{ "name": "Case Study", "color": "#e8b614" }
-		],
-		"title": "Project Kaptan",
-		"description": "Project Kaptan is a weather app for metro manila that is heavily inspired by Persona 5",
-		"link": "https://luekely.github.io/Project-Kaptan/index.html"
-	},
-	{
-		"tags": [{ "name": "Solo Project", "color": "#41c68a" }],
-		"title": "Pixel Art Gallery",
-		"description": "Pixel Art Gallery is a gallery for the pixel art I make. ",
-		"link": "https://pixel-art-gallery.vercel.app/"
-	},
-	{
-		"tags": [{ "name": "Solo Project", "color": "#41c68a" }],
-		"title": "Vanity Way",
-		"description": "A simple frontend page for a none existing store. ",
-		"link": "https://luekely.github.io/Vanity-Way/"
-	},
-	{
-		"tags": [{ "name": "Solo Project", "color": "#41c68a" }],
-		"title": "Magic Potion Shop",
-		"description": "Buy my potions!",
-		"link": "https://luekely.github.io/Magic-Potion-Shop/"
-	}
+      { "name": "Team Project", "color": "#d83674" }
+    ],
+    "title": "Fair Write",
+    "description": "A Gender Fair Language AI Integrated Text Editing Web App",
+    "link": "https://github.com/orgs/Fair-Write/"
+  },
+  {
+    "tags": [
+      { "name": "Solo Project", "color": "#41c68a" },
+      { "name": "Case Study", "color": "#e8b614" }
+    ],
+    "title": "Gameboy CPU emulator",
+    "description": "A Sharp LR35902 Cpu emulator that executes instructions.",
+    "link": "https://github.com/LueKely/Astro-Boy"
+  },
+  {
+    "tags": [
+      { "name": "Solo Project", "color": "#41c68a" },
+      { "name": "Case Study", "color": "#e8b614" }
+    ],
+    "title": "Mighty Wizards The Game",
+    "description": "A small video game i made",
+    "link": "https://github.com/LueKely/Mighty-Wizards-The-Game"
+  },
+  {
+    "tags": [
+      { "name": "Solo Project", "color": "#41c68a" },
+      { "name": "Case Study", "color": "#e8b614" }
+    ],
+    "title": "MF18",
+    "description": "An Audio Visualizer using GLSL and Three.js.",
+    "link": "https://audio-visualizer-chi.vercel.app/"
+  },
+
+  {
+    "tags": [
+      { "name": "UX Lead", "color": "#e17aef" },
+      { "name": "Team Project", "color": "#d83674" }
+    ],
+    "title": "Echoes Tracker",
+    "description": "Echoes Tracker is a real time web-based location tracker for students and teachers a-like. ",
+    "link": "https://github.com/pangilinanervin22/echoes-track-frontend"
+  },
+  {
+    "tags": [
+      { "name": "Team Project", "color": "#d83674" },
+      { "name": "UX Lead", "color": "#e17aef" }
+    ],
+    "title": "What's Your Ulam",
+    "description": "What's Your Ulam a web-based recipe sharing platform.",
+    "link": "https://github.com/LueKely/WYU-Frontend"
+  },
+  {
+    "tags": [
+      { "name": "Project Manager", "color": "#3d45ce" },
+      { "name": "Team Project", "color": "#d83674" }
+    ],
+    "title": "Gym Circle",
+    "description": "Gym Circle is a Web base gym subscription service.",
+    "link": "https://github.com/LueKely/GymCircle"
+  },
+  {
+    "tags": [
+      { "name": "Solo Project", "color": "#41c68a" },
+      { "name": "Case Study", "color": "#e8b614" }
+    ],
+    "title": "Project Kaptan",
+    "description": "Project Kaptan is a weather app for metro manila that is heavily inspired by Persona 5",
+    "link": "https://luekely.github.io/Project-Kaptan/index.html"
+  },
+  {
+    "tags": [{ "name": "Solo Project", "color": "#41c68a" }],
+    "title": "Pixel Art Gallery",
+    "description": "Pixel Art Gallery is a gallery for the pixel art I make. ",
+    "link": "https://pixel-art-gallery.vercel.app/"
+  },
+  {
+    "tags": [{ "name": "Solo Project", "color": "#41c68a" }],
+    "title": "Vanity Way",
+    "description": "A simple frontend page for a none existing store. ",
+    "link": "https://luekely.github.io/Vanity-Way/"
+  },
+  {
+    "tags": [{ "name": "Solo Project", "color": "#41c68a" }],
+    "title": "Magic Potion Shop",
+    "description": "Buy my potions!",
+    "link": "https://luekely.github.io/Magic-Potion-Shop/"
+  }
 ]
